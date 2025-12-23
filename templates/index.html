@@ -1,0 +1,597 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- banner slider start -->
+
+<section class="w3l-main-slider" id="home">
+	<!-- main-slider -->
+	<div class="companies20-content">
+
+		<div class="owl-one owl-carousel owl-theme">
+			<div class="item">
+				<li>
+					<div class="slider-info banner-view bg bg2" data-selector=".bg.bg2">
+						<div class="banner-info">
+							<div class="container">
+								<div class="banner-info-bg mx-auto text-center">
+									<h5>Welcome To our Online System </h5>
+									<!-- <a class="btn btn-secondary btn-theme2 mt-md-5 mt-4"
+										href="{% url 'services' %}">Read More</a> -->
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</li>
+			</div>
+			<div class="item">
+				<li>
+					<div class="slider-info  banner-view banner-top1 bg bg2" data-selector=".bg.bg2">
+						<div class="banner-info">
+							<div class="container">
+								<div class="banner-info-bg mx-auto text-center">
+									<h5> Make Your Card Here</h5>
+									<a class="btn btn-secondary btn-theme2 mt-md-5 mt-4" href="{% url 'AddRationCard' %}">Read
+										More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</div>
+			<div class="item">
+				<li>
+					<div class="slider-info banner-view banner-top2 bg bg2" data-selector=".bg.bg2">
+						<div class="banner-info">
+							<div class="container">
+								<div class="banner-info-bg mx-auto text-center">
+									<h5>We provide organic Foods In Kick</h5>
+									<!-- <a class="btn btn-secondary btn-theme2 mt-md-5 mt-4" href="services.html">Read
+										More</a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</div>
+			<div class="item">
+				<li>
+					<div class="slider-info banner-view banner-top3 bg bg2" data-selector=".bg.bg2">
+						<div class="banner-info">
+							<div class="container">
+								<div class="banner-info-bg mx-auto text-center">
+									<h5>We make Transparency </h5>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</div>
+		</div>
+	</div>
+
+	</div>
+	
+
+	<script src="assets/js/owl.carousel.js"></script>
+	<!-- script for -->
+	<script>
+		$(document).ready(function () {
+			$('.owl-one').owlCarousel({
+				loop: true,
+				margin: 0,
+				nav: false,
+				responsiveClass: true,
+				autoplay: true,
+				autoplayTimeout: 5000,
+				autoplaySpeed: 1000,
+				autoplayHoverPause: false,
+				responsive: {
+					0: {
+						items: 1,
+						nav: false
+					},
+					480: {
+						items: 1,
+						nav: false
+					},
+					667: {
+						items: 1,
+						nav: true
+					},
+					1000: {
+						items: 1,
+						nav: true
+					}
+				}
+			})
+		})
+	</script>
+	
+</section>
+<!-- banner slider end -->
+
+
+<!--  services section -->
+<section class="w3l-index6" id="service">
+	<div class="features-with-17_sur py-5">
+		<div class="container py-lg-5">
+			<div class="heading text-center mx-auto">
+				<h3 class="head">We handle everything for you!</h3>
+				<p class="my-3 head">Our online Rationcard Management System provides a fast, efficient and survecure way to manage.</p>
+			</div>
+			<div class="features-with-17-top_sur mt-5 pt-3">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+						<div class="features-with-17-right-tp_sur">
+							<div class="features-with-17-left1 mb-3">
+								<h4>40</h4>
+							</div>
+							<div class="features-with-17-left2">
+								<h6>Years Experience</h6>
+								<p> Lorem Ipsum is simply dummy text of the printing and industry.
+									Lorem Ipsum has the industry's standard dummy text ever since the 1500s,</p>
+								<!-- <a href="services.html" class="red mt-3">Read More </a> -->
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mt-md-0 mt-5">
+						<div class="features-with-17-right-tp_sur">
+							<div class="features-with-17-left1 mb-3">
+								<h4>30</h4>
+							</div>
+							<div class="features-with-17-left2">
+								<h6>Specialists Farmers</h6>
+								<p> Lorem Ipsum is simply dummy text of the printing and industry.
+									Lorem Ipsum has the industry's standard dummy text ever since the 1500s,</p>
+								<!-- <a href="services.html" class="red mt-3">Read More </a> -->
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+						<div class="features-with-17-right-tp_sur">
+							<div class="features-with-17-left1 mb-3">
+								<h4>15</h4>
+							</div>
+							<div class="features-with-17-left2">
+								<h6>Winning Awards </h6>
+								<p> Lorem Ipsum is simply dummy text of the printing and industry.
+									Lorem Ipsum has the industry's standard dummy text ever since the 1500s,</p>
+								<!-- <a href="services.html" class="red mt-3">Read More </a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+    </div>
+</section> 
+<!--  //services section -->
+<!-- customers4 block -->
+<section class="w3l-customers-4" id="testimonials">
+	<div id="customers4-block" class="py-5">
+		<div class="container py-md-3">
+
+
+
+
+			<div id="customerhnyCarousel" class="carousel slide" data-ride="carousel">
+
+				<ol class="carousel-indicators">
+					<li data-target="#customerhnyCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#customerhnyCarousel" data-slide-to="1"></li>
+					<li data-target="#customerhnyCarousel" data-slide-to="2"></li>
+				</ol>
+
+				<!-- Carousel items -->
+				<div class="carousel-inner pb-5 mb-md-5 pt-md-5">
+					<div class="carousel-item active">
+						<div class="section-title">
+							<div class="item-top">
+								<div class="item text-center">
+									<div class="imgTitle">
+										<img src="{% static 'assets/images/c1.jpg' %}" class="img-responsive" alt="" />
+									</div>
+									<h6 class="mt-3">Manthan Mangaroliya</h6>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--.item-->
+
+					<div class="carousel-item">
+						<div class="section-title">
+							<div class="item-top">
+								<div class="item text-center">
+									<div class="imgTitle">
+										<img src="{% static 'assets/images/c2.jpg' %}" class="img-responsive" alt="" />
+									</div>
+									<h6 class="mt-3">Parth Kachhadiya </h6>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--.item-->
+					<div class="carousel-item">
+						<div class="section-title">
+							<div class="item-top">
+								<div class="item text-center">
+									<div class="imgTitle">
+										<img src="{% static 'assets/images/c3.jpg' %}" class="img-responsive" alt="" />
+									</div>
+									<h6 class="mt-3">Darshan Patel</h6>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--.item-->
+
+				</div>
+				<!--.carousel-inner-->
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+
+</section>
+<!-- <div class="products-4" id="gallery">
+	Products4 block
+	<div id="products4-block" class="text-center">
+		<div class="container">
+			<div class="heading text-center mx-auto mb-5">
+				<h3 class="head">What We Do</h3>
+				<p class="my-3 head"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+					Curae;
+					Nulla mollis dapibus nunc, ut rhoncus
+					turpis sodales quis. Integer sit amet mattis quam.</p>
+			</div>
+			<input id="tab1" type="radio" name="tabs" checked>
+			<label class="tabtle" for="tab1">All</label>
+
+			<input id="tab2" type="radio" name="tabs">
+			<label class="tabtle" for="tab2">Store</label>
+
+			<input id="tab3" type="radio" name="tabs">
+			<label class="tabtle" for="tab3">Grain</label>
+
+			<input id="tab4" type="radio" name="tabs">
+			<label class="tabtle" for="tab4">Rice</label>
+
+			<section id="content1" class="tab-content text-left">
+				<div class="d-grid grid-col-3">
+					<div class="product"> 
+							
+							<figure>
+								<img src="assets/images/g1.jpg" class="img-responsive" alt="" />
+							</figure>
+						
+					</div>
+					<div class="product">
+						<a href="{% static 'assets/images/g2.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="assets/images/g2.jpg" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+					<div class="product">
+						<a href="{% static 'assets/images/g3.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="assets/images/g3.jpg" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+					<div class="product">
+						<a href="{% static 'assets/images/g4.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g4.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+					<div class="product">
+						<a href="{% static 'assets/images/g5.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g5.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+					<div class="product">
+						<a href="{% static 'assets/images/g6.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g6.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+
+
+				</div>
+			</section>
+
+			<section id="content2" class="tab-content text-left">
+				<div class="d-grid grid-col-3">
+					<div class="product">
+						<a href="{% static 'assets/images/g7.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g7.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+					<div class="product">
+						<a href="{% static 'assets/images/g8.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g8.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+					<div class="product">
+						<a href="{% static 'assets/images/g1.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g1.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+					<div class="product">
+						<a href="{% static 'assets/images/g2.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g2.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+					<div class="product">
+						<a href="{% static 'assets/images/g3.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g3.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+					<div class="product">
+						<a href="{% static 'assets/images/g4.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g4.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+				</div>
+			</section>
+
+			<section id="content3" class="tab-content text-left">
+				<div class="d-grid grid-col-3">
+					<div class="product">
+						<a href="{% static 'assets/images/g5.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g5.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+					<div class="product">
+						<a href="{% static 'assets/images/g6.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g6.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+					<div class="product">
+						<a href="{% static 'assets/images/g7.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g7.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+				</div>
+			</section>
+
+			<section id="content4" class="tab-content text-left">
+				<div class="d-grid grid-col-3">
+					<div class="product">
+						<a href="{% static 'assets/images/g8.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g8.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+					<div class="product">
+						<a href="{% static 'assets/images/g1.jpg' %}" data-lightbox="example-set"
+							data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
+							<figure>
+								<img src="{% static 'assets/images/g1.jpg' %}" class="img-responsive" alt="" />
+							</figure>
+						</a>
+
+					</div>
+				</div>
+			</section>
+		</div>
+	</div> -->
+	<!-- Products4 block -->
+</div>
+<script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'assets/js/lightbox-plus-jquery.min.js' %}"></script>
+<section class="w3l-features-4">
+	<!-- /features -->
+	<div class="features py-5" id="features">
+		<div class="container py-md-3">
+			<div class="heading text-center mx-auto">
+				<h3 class="head">Advance Features!</h3>
+				<p class="my-3 head"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+					Curae;
+					Nulla mollis dapibus nunc, ut rhoncus
+					turpis sodales quis. Integer sit amet mattis quam.</p>
+			</div>
+			<div class="fea-gd-vv row mt-5 pt-3">
+				<div class="float-lt feature-gd col-md-6">
+					<div class="icon"> <span class="fa fa-tachometer" aria-hidden="true"></span></div>
+					<div class="icon-info">
+						<h5><a href="#">Fast</a></h5>
+						<p> "Fast search and filter options enable customers to quickly find and select the desired
+							products from a wide range of options in the Kick Card system."
+						</p>
+						<!-- <a href="#" class="red mt-3">Read More </a> -->
+					</div>
+				</div>
+				<div class="float-mid feature-gd col-md-6 mt-md-0 mt-5">
+					<div class="icon"> <span class="fa fa-thumbs-up" aria-hidden="true"></span></div>
+					<div class="icon-info">
+						<h5><a href="#">Efficient</a></h5>
+						<p> "Efficient inventory management system to ensure real-time updates on product
+							availability and prevent out-of-stock situations."
+						</p>
+						<!-- <a href="#" class="red mt-3">Read More </a> -->
+					</div>
+				</div>
+				<div class="float-rt feature-gd col-md-6 mt-5">
+					<div class="icon"> <span class="fa fa-book" aria-hidden="true"></span></div>
+					<div class="icon-info">
+						<h5><a href="#">Easy Manage</a></h5>
+						<p> "Easy-to-use inventory management tools enable seamless tracking and updating of product availability,
+							ensuring efficient management of stock levels in the online ration system."
+						</p>
+						<!-- <a href="#" class="red mt-3">Read More </a> -->
+					</div>
+				</div>
+				<div class="float-lt feature-gd col-md-6 mt-5">
+					<div class="icon"> <span class="fa fa-handshake-o" aria-hidden="true"></span></div>
+					<div class="icon-info">
+						<h5><a href="#">Transparecy</a>
+						</h5>
+						<p> "Transparency is a key feature of our Kick Card system, providing customers with clear and
+							detailed information about product availability, pricing, and delivery timelines,
+							ensuring an open and trustworthy shopping experience."
+						</p>
+						<!-- <a href="#" class="red mt-3">Read More <span class="fa fa-angle-right pl-1"></span></a> -->
+					</div>
+				</div>
+				<div class="float-mid feature-gd col-md-6 mt-5">
+					<div class="icon"> <span class="fa fa-desktop" aria-hidden="true"></span></div>
+					<div class="icon-info">
+						<h5><a href="#">Digital</a>
+						</h5>
+						<p> "Digital features, such as real-time order tracking, automated payment processing, and
+							personalized recommendations, enhance the convenience and efficiency of the Kick Card system."
+						</p>
+						<!-- <a href="#" class="red mt-3">Read More </a> -->
+					</div>
+				</div>
+				<div class="float-rt feature-gd col-md-6 mt-5">
+					<div class="icon"> <span class="fa fa-gift" aria-hidden="true"></span></div>
+					<div class="icon-info">
+						<h5><a href="#">Premium</a>
+						</h5>
+						<p> "Premium features in our Kick Card system include expedited delivery,
+							personalized recommendations, and priority access to limited stock items."
+						</p>
+						<!-- <a href="#" class="red mt-3">Read More </a> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //features -->
+</section>
+<!-- <section class="w3l-news" id="news">
+	<section id="grids5-block" class="py-5">
+		<div class="container py-lg-3">
+			<div class="heading text-center mx-auto">
+				<h3 class="head">Recent posts and updates</h3>
+				<p class="my-3 head"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+					Curae;
+					Nulla mollis dapibus nunc, ut rhoncus
+					turpis sodales quis. Integer sit amet mattis quam.</p>
+			</div>
+			<div class="grid-view">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 mt-md-4 mt-4">
+						<div class="grids5-info">
+							<a href="#" class="d-block zoom"><img src="{% static 'assets/images/g7.jpg' %}" alt=""
+									class="img-fluid news-image"></a>
+							<div class="blog-info">
+								<p class="date">Mar 29, 2020</p>
+								<h4><a href="#">Organic Veggies in Your Diet</a></h4>
+
+								<p class="blog-text">Lorem ipsum dolor sit amet nostrum ad minus libero fugiat molestiae
+									ullam ipsam
+									quas unde earum...</p>
+								<a href="#" class="btn btn-news">Read More <span class="fa fa-angle-right pl-1"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mt-md-4 mt-5">
+						<div class="grids5-info">
+							<a href="#" class="d-block zoom"><img src="{% static 'assets/images/g8.jpg' %}" alt=""
+									class="img-fluid news-image"></a>
+							<div class="blog-info">
+								<p class="date">Sep 28, 2020</p>
+								<h4><a href="#">Importance of Food Safety Training</a></h4>
+
+								<p class="blog-text">Lorem ipsum dolor sit amet nostrum ad minus libero fugiat molestiae
+									ullam ipsam
+									quas unde earum...</p>
+								<a href="#" class="btn btn-news">Read More <span class="fa fa-angle-right pl-1"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 offset-md-3 offset-lg-0 col-md-6 mt-md-4 mt-5">
+						<div class="grids5-info">
+							<a href="#" class="d-block zoom"><img src="{% static 'assets/images/g9.jpg' %}" alt=""
+									class="img-fluid news-image"></a>
+							<div class="blog-info">
+								<p class="date">Dec 28, 2020</p>
+								<h4><a href="#">Eight Tips for Healthy Eating</a></h4>
+
+								<p class="blog-text">Lorem ipsum dolor sit amet nostrum ad minus libero fugiat molestiae
+									ullam ipsam
+									quas unde earum...</p>
+								<a href="#" class="btn btn-news">Read More <span class="fa fa-angle-right pl-1"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</section> -->
+<!-- grids block 5 -->
+
+<!-- // grids block 5 -->
+{% endblock %}

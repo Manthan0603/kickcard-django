@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+
+# Virtual environment (if created later)
+venv/
+env/
+.venv/
+
+# Environment variables
+.env
+
+# PyCharm
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

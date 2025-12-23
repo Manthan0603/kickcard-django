@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<style>
+	#c1{
+		background-color: rgb(253, 244, 231);
+	}
+	body {
+		/* background-image: url( '/static/images/new.jpg' ); */
+			/* background-repeat: no-repeat;
+			background-attachment: fixed; */
+			
+		}
+	
+	/* #div1{
+		margin-top:100px;
+	} */
+
+  .card-title i:hover{
+  transform: scale(1.25) rotate(100deg);
+  color:#18d4ca;
+
+}
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+.card-text{
+  height:80px;
+}
+
+.card::before, .card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform .3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: '';
+  pointer-events: none;
+}
+.card::before {
+  transform-origin: left top;
+}
+.card::after {
+  transform-origin: right bottom;
+}
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+  transform: scale3d(1, 1, 1);
+}
+	</style>
+</head>
+<body>
+	<div class="container mt-5" id="div1">
+	<div class="card" id="c1">
+	<div class="container mt-5 mb-3">
+		<h1><center><b>Dashboard</b></h1></center>
+	</div>
+	<div class="container mt-2">
+			<div class="card-header text-white bg-secondary">
+				<h4> Available Units </h4>
+			</div>
+			<div class="row mt-2 mb-2">
+				<div class="col-md-3 col-sm-6 item">
+				<div class="card item-card card-block">
+					<div class="card-header text-white bg-secondary">
+					<h5>Grain</h5></div>
+					<p class="card-text"><b><br>&nbsp&nbsp&nbsp&nbsp{{ grain }}kg</b></p>
+			</div>
+				</div>
+				<div class="col-md-3 col-sm-6 item">
+				<div class="card item-card card-block">
+					<div class="card-header text-white bg-secondary">
+						<h5>Rice</h5></div>
+					<p class="card-text"><b><br>&nbsp&nbsp&nbsp&nbsp{{ rice }}kg</b></p>
+			</div>
+				</div>
+				<div class="col-md-3 col-sm-6 item">
+				<div class="card item-card card-block">
+					<div class="card-header text-white bg-secondary">
+					<h5>Kerosene</h5></div>
+					<p class="card-text"><b><br>&nbsp&nbsp&nbsp&nbsp{{kero}} ltr</b></p>
+			</div>
+				</div>
+				<div class="col-md-3 col-sm-6 item">
+				<div class="card item-card card-block">
+					<div class="card-header text-white bg-secondary">
+						<h5>Toor Dal</h5></div>
+					<p class="card-text"><b><br>&nbsp&nbsp&nbsp&nbsp{{toor}}kg</b></p>
+					</div>
+				</div>
+				<p class="card-text" id="check" hidden>{{check}}</p>
+				  <div class="container mt-4 mb-3" id="bt">
+						<form method="POST">
+							{% csrf_token %}
+							{{form}}
+							<a class="btn btn-danger col-sm-1 offset-sm-5" type="button" href="{% url 'index' %}">Home</a>
+					  		<button type ="submit" class="btn btn-primary" id="submit"> Book Kick</button>
+						</form>
+				  </div>
+		  </div>
+		</div>
+	</div>
+	</div>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script>
+
+		$("#submit").click(function(){
+			var ele = document.getElementById("check").innerHTML;
+			console.log(ele);
+			if (ele == 1){
+				alert('Your Kick has been booked. Please! Collect it from your Branch.')
+			} else{
+				alert('You had Purchased your ration already. Check it next month.')
+			}
+			}
+		)
+
+	</script>
+</body>
+</html>

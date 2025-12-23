@@ -1,0 +1,273 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Home</title>
+    <!-- web fonts -->
+   <!-- web fonts -->
+   <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+   <link href="//fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+   <!-- //web fonts -->
+    <!-- //web fonts -->
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+  </head>
+  <body>
+
+
+<!-- Top Menu 1 -->
+<section class="w3l-top-menu-1">
+	<div class="top-hd">
+		<div class="container">
+	<header class="row top-menu-top">
+		<div class="accounts col-md-9 col-6">
+				<li class="top_li"><span class="fa fa-phone"></span><a href="tel:+91 9876543210">+91 9876543210</a> </li>
+				<li class="top_li1"><span class="fa fa-envelope-o"></span> <a href="mailto:ration@govt.co.in" class="mail"> ration@govt.co.in</a>	</li>
+		</div>
+		<div class="social-top col-md-3 col-6">
+			<div class="main-social-head">
+				<a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
+				<a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
+				<a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
+			</div>
+		</div>
+	</header>
+</div>
+</div>
+</section>
+<!-- //Top Menu 1 -->
+<section class="w3l-bootstrap-header">
+  <nav class="navbar navbar-expand-lg navbar-light py-lg-2 py-2">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><span class="">Kick</span>  Card</a>
+      <!-- if logo is image enable this
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon fa fa-bars"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mt-2">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}">Home</a>
+            <!-- Modal -->
+          <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              
+                <div class="modal-body">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <b> ration has been booked successfully.Please collect it from your nearest branch.</b>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Okay</button> -->
+                
+                <!-- </div>
+              </div>
+            </div>
+          </div> -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="{% url 'services' %}">Services</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+                <a class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Kick Card
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{% url 'AddRationCard' %}">Add Kick Card</a>
+                  
+                {% if user.user.id %}
+                  <a class="dropdown-item" href="{% url 'update' user.user.id %}">Update Kick Card</a>
+                  <a class="dropdown-item" href="{% url 'cancel' %}">Cancel Kick Card</a>
+                {% else %}
+                <a class="dropdown-item" href="#">Update Kick Card</a>
+                <a class="dropdown-item" href="#">Cancel Kick Card</a>
+                {% endif %}
+                <!-- {% if 'cancel' %}
+                 <a class="dropdown-item" href="{% url 'cancel' %}">Cancel Kick Card</a>
+                {% else %}
+                <a class="dropdown-item" href="#">Cancel Kick Card</a>
+                {% endif %} -->
+                </div>
+            </div>
+          
+            <!-- <a class="nav-link" href="{% url 'AddRationCard' %}">Add Kick Card</a> -->
+          </li>
+        </ul>
+        <ul class="nav-item">
+          <li class="my-2 my-lg-0 nav-link">
+            <div class="dropdown">
+                <a href class=" dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ profile }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <a class="dropdown-item " href="{% url 'dashboard'%}">Dashboard</a>
+                <form method="POST">
+                  {% csrf_token %}
+                  <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                </form>
+                </div>
+            </div>
+
+              <!-- <button type="button" class="btn btn-sm btn-dark">{{ profile }}</button> -->
+          </li>
+      </ul>
+       <!--  <ul class="nav-item">
+            <li class="my-2 my-lg-0 nav-link">
+                <form method="POST">
+                  {% csrf_token %}
+                <a href="{% url 'logout' %}" class="btn btn-sm btn-dark">Logout</a>
+                </form>
+            </li>
+        </ul> -->
+    </div>
+  </nav>
+</section>
+
+  {% block content %}
+  {% endblock %}
+
+  <section class="w3l-footer-29-main">
+  <div class="footer-29">
+      <div class="container">
+          <div class="d-grid grid-col-4 footer-top-29">
+              <div class="footer-list-29 footer-1">
+                  <h6 class="footer-title-29">Contact Us</h6>
+                  <ul>
+                      <li><p><span class="fa fa-map-marker"></span> Office No. 12, Sanidhya Building, oppo. UCO Bank, Ashram Road, Ahmedabad - 380009.</p></li>
+                      <li><a href="tel:+91 9727835207"><span class="fa fa-phone"></span> +91 9727835207</a></li>
+                      <li><a href="mailto:ration@govt.co.in" class="mail"><span class="fa fa-envelope-open-o"></span> ration@govt.co.in</a></li>
+                  </ul>
+                  <div class="main-social-footer-29">
+                      <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
+                      <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
+                      <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
+                      <a href="#google-plus" class="google-plus"><span class="fa fa-google-plus"></span></a>
+                      <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
+                  </div>
+              </div>
+            
+              <div class="footer-list-29 footer-4">
+                  <ul>
+                      <h6 class="footer-title-29">Quick Links</h6>
+                      <li><a href="{%url 'index' %}">Home</a></li>
+                      <li><a href="{%url 'about' %}">About</a></li>
+                      <li><a href="{%url 'services' %}">Services</a></li>
+                      <li><a href="#"> Blog</a></li>
+                      <li><a href="{%url 'contact' %}">Contact</a></li>
+                  </ul>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+  <!-- move top -->
+  <button onclick="topFunction()" id="movetop" title="Go to top">
+    <span class="fa fa-angle-up"></span>
+  </button>
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("movetop").style.display = "block";
+      } else {
+        document.getElementById("movetop").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <!-- /move top -->
+</section>
+<script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+<!-- //footer-28 block -->
+</section>
+<script>
+  $(function () {
+    $('.navbar-toggler').click(function () {
+      $('body').toggleClass('noscroll');
+    })
+  });
+</script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+
+<!-- Template JavaScript -->
+<script src="{% static 'assets/js/all.js' %}"></script>
+<!-- Smooth scrolling -->
+<!-- <script src="assets/js/smoothscroll.js"></script> -->
+<script src="{% static 'assets/js/owl.carousel.js' %}"></script>
+
+<!-- script for -->
+<script>
+  $(document).ready(function () {
+    $('.owl-one').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      responsiveClass: true,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        480: {
+          items: 1,
+          nav: false
+        },
+        667: {
+          items: 1,
+          nav: true
+        },
+        1000: {
+          items: 1,
+          nav: true
+        }
+      }
+    })
+  })
+</script>
+<!-- //script -->
+
+</body>
+
+</html>

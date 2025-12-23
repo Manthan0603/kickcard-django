@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>AddRationCard</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+	{% load static %}
+    <style>
+	#d1 {
+        border-radius: 0px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        padding: 20px;
+        border: 20px;
+          }
+    #d2{
+        border-radius: 0px;
+        background-color: #c5c5c5;
+        border-radius: 10px;
+        padding: 10px;
+        border: 10px;
+          }
+  </style>
+</head>
+<body>
+	<div class="container col-sm-4 mt-5 mb-5" id="d1">
+        <div class= "container mt-2 mb-4" >
+            <legend><center><h1 style="color:rgb(0, 0, 0)"><b>Cancel Kick Card</b></h1></center></legend>
+        </div>
+        <div id="d2" class="">
+        <form class="form-horizontal" method="POST" enctype="multipart/form-data">
+            <div class="form-check ">
+                <!-- <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> -->
+                <h5><center>
+                  Submit Your Request From Here.</center>
+                </h5>
+                {% csrf_token %}
+                {{form}}
+            </div>
+
+        <div class="">
+            <button type="submit" class="btn btn-primary mt-4 offset-sm-4">Submit</button>
+            <a  class="btn btn-danger mt-4" href="{% url 'index' %}">Home </a>
+        </div>
+    </form>
+</div>
+		
+	
+</body>
+</html>

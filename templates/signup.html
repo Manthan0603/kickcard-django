@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+<div class="wrapper fadeInDown">
+<!--    <h2 align="center">Login Here</h2><br>-->
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <!--    <div class="fadeIn first">-->
+        <!--      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />-->
+        <!--    </div>-->
+
+        <!-- Login Form --><hr>
+        <h3><font size="5">Register for An Account</font></h3><hr>
+        <div class="container">
+            <br>
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                        <span class="fadeIn second">{{ field.errors }}</span>
+                        <label class="fadeIn third">{{ field.label_tag }}</label>
+                        <div class="fadeIn third">{{ field }}</div>
+                {% endfor %}
+                    <button style="text-align:center;" type="submit" class="btn btn-success btn-lg">Submit</button>
+            </form>
+            <div class="panel-footer">
+                Already have an account? <a href="{% url 'login' %}">Click here</a> to log in.
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
+</body>
+</html>
